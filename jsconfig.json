@@ -1,0 +1,13 @@
+// tsconfig.json or jsconfig.json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@ethers": ["ethers.js"],
+      "@hooks/*": ["hooks/*"],
+      "@ui": ["ui"],
+      "@ui/*": ["ui/*"],
+      "@utils": ["utils.js"]
+    }
+  }
+}
