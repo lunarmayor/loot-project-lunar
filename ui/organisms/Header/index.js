@@ -4,7 +4,6 @@ import useCurrentUser from "@hooks/useCurrentUser";
 import Link from "next/link";
 import { FaBars } from "react-icons/fa";
 
-import SearchInput from "./GlobalSearch";
 import Account from "./Account";
 import Sidebar from "./Sidebar";
 
@@ -45,8 +44,6 @@ const Header = () => {
         alignItems="center"
       >
         <Flex mx={4} flex={1} alignItems="center">
-          <SearchInput width="300px" placeholder="Search for Projects" />
-
           <Link href="/">
             <a>
               <NavItem ml={4}>Projects</NavItem>
@@ -68,6 +65,12 @@ const Header = () => {
           <Link href="/">
             <a>
               <NavItem ml={4}>Governance</NavItem>
+            </a>
+          </Link>
+
+          <Link href="/">
+            <a>
+              <NavItem ml={4}>Developers</NavItem>
             </a>
           </Link>
         </Flex>
