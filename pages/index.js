@@ -67,7 +67,7 @@ const CardGrid = props => (
   />
 );
 
-const Card = ({ title, description, action, image, lootOnly }) => (
+const Card = ({ title, description, action, image, cost, lootOnly }) => (
   <Flex
     flex={1}
     flexDirection="column"
@@ -199,7 +199,7 @@ const Home = () => {
           right gear
         </P>
 
-        <Flex maxWidth={1200} mt={4} mb={5} flexWrap="wrap">
+        <Flex maxWidth={1200} mt={4} mb={5} flexWrap="wrap" p={3}>
           <Flex
             mr={[0, 2]}
             mb={[3, 0]}
@@ -208,7 +208,7 @@ const Home = () => {
             bg="backgroundSecondary"
             sx={{
               width: ["100%", 300],
-              height: 600
+              height: ["unset", 600]
             }}
           >
             <Box flex={1}>
@@ -237,7 +237,7 @@ const Home = () => {
             flexDirection="column"
             sx={{
               width: ["100%", 373],
-              height: 600
+              height: ["unset", 600]
             }}
           >
             <Box flex={1}>
@@ -270,7 +270,7 @@ const Home = () => {
             overflow="hidden"
             sx={{
               width: ["100%", 300],
-              height: 600
+              height: ["unset", 600]
             }}
           >
             <Box flex={1}>
@@ -292,7 +292,9 @@ const Home = () => {
           </Flex>
         </Flex>
 
-        <img src="/path.svg" width={400} />
+        <Box px={3}>
+          <img src="/path.svg" width={400} />
+        </Box>
 
         <CardGrid>
           <Card
@@ -371,7 +373,13 @@ const Home = () => {
         </CardGrid>
       </Flex>
 
-      <Flex flexDirection="column" alignItems="center" pb={6} bg="#666670">
+      <Flex
+        flexDirection="column"
+        alignItems="center"
+        px={3}
+        pb={6}
+        bg="#666670"
+      >
         <P mt={5}>CHAPTER 3</P>
 
         <H2 mt={2}>A Quest for Adventurers</H2>
